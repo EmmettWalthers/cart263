@@ -21,7 +21,7 @@ function draw() {
         fill("white");
         noStroke();
         text(str(i), i * 4 * 10, 25);
-        pop();   
+        pop();
     }
 
     for (let i = 0; i < 16; i++) {
@@ -30,6 +30,6 @@ function draw() {
         fill("white");
         noStroke();
         text(str(i), 10, i * 4 * 10);
-        pop();   
+        pop();
     }
 }

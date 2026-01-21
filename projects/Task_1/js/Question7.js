@@ -49,23 +49,23 @@ function mousePressed() {
 
 function circleLoop() {
     for (let i = 0; i < 11; i++) {
-            for (let j = 0; j < 11; j++) {
-                push()
-                noStroke()
-                fill(r, g, b)
-                ellipse(x + i * 50, y + j * 50, 50, 50);
-                pop()
-            }
+        for (let j = 0; j < 11; j++) {
+            push()
+            noStroke()
+            fill(r, g, b)
+            ellipse(x + i * 50, y + j * 50, 50, 50);
+            pop()
         }
+    }
 }
 
 function rectLoop() {
     for (let i = 0; i < 11; i++) {
-            for (let j = 0; j < 11; j++) {
-                push()
-                fill(r, g, b)
-                rect(i * 50, j * 50, 50, 50);
-                pop()
-            }
+        for (let j = 0; j < 11; j++) {
+            push()
+            fill(r, g, b)
+            rect(i * 50, j * 50, 50, 50);
+            pop()
         }
+    }
 }
