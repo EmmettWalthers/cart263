@@ -3,6 +3,7 @@ window.onload = setup;
 /** function setup */
 function setup(){
 console.log("we are a go!")
+customCreateElement()
 /*** ALL ANWSERS TO BE ADDED IN THE ALLOCATED SPACE */
 /*** START PART ONE ACCESS */ 
 /* 1: all paragraph elements */
@@ -67,6 +68,7 @@ console.log("we are a go!")
  and change the background color ... of first and second ...*/
 /***CODE */
 
+
 /*************************************** */
 /* 3: Change the src element of the first image element on the page to be ...
 /***CODE */
@@ -114,6 +116,14 @@ a background using that color.
 /* 1H: Iterate through the allPTagsThree array and call customCreateElement(), 
 passing the current allPTagsThree element as the parent with each iteration.*/
 /***CODE */
+
+let allPTagsThree = document.querySelectorAll("p")
+console.log(allPTagsThree)
+
+ function customCreateElement(parent){
+    let newP = allPTagsThree.createElement("p")
+    newP.classList.add("using create Element")
+}
 
 
 /***EXPLANATION::
