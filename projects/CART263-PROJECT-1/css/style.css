@@ -30,4 +30,6 @@ body {
 
   cursor: pointer;
   border: 2px solid rgb(0, 86, 22);
+
+  z-index: 2;
 }
