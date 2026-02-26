@@ -34,10 +34,13 @@ class Weather {
 
         if (this.state === "sunny") {
             this.renderSunny();
+            this.temp = Math.floor(Math.random() * 10) + 25;
         } else if (this.state === "raining") {
             this.renderRaining();
+            this.temp = Math.floor(Math.random() * 10) + 10;
         } else if (this.state === "cloudy") {
             this.renderCloudy();
+            this.temp = Math.floor(Math.random() * 10) + 15;
         }
 
         this.renderTemp();

@@ -80,7 +80,7 @@ window.onload = function () {
       weather.renderWeather();
       }
 
-      else if (weather.states === "raining") {
+      else if (weather.state === "raining") {
       let options = ["sunny", "cloudy"];
       weather.state = options[Math.floor(Math.random() * options.length)];
       weather.renderWeather();
@@ -91,6 +91,8 @@ window.onload = function () {
       weather.state = options[Math.floor(Math.random() * options.length)];
       weather.renderWeather();
       }
+
+      sun.weatherEffect(weather.state);
     }, 1000);
     weather.renderWeather();
 

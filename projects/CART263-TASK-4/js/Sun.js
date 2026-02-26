@@ -7,8 +7,6 @@ class Sun{
         this.vx = 1;
         this.vy =1;
         self = this;
-      
-        
 }
 
     renderSun(){
@@ -25,4 +23,15 @@ class Sun{
         this.sunDiv.style.top = this.y + "px";
       }
 
+    weatherEffect(state){
+        if(state === "sunny"){
+            this.sunDiv.style.opacity = "1";
+        }
+        else if(state === "cloudy"){
+            this.sunDiv.style.opacity = "0.5";
+        }
+        else if(state === "raining"){
+            this.sunDiv.style.opacity = "0";
+        }
+    }   
 }
