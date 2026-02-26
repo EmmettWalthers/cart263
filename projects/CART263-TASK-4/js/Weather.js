@@ -16,22 +16,34 @@ class Weather {
         this.state = state;
         this.temp = temp;
 
-        this.weatherDiv = document.createElement("div");
+        this.tempDisplay = document.createElement("div");
 
+        this.tempDisplay.style.position = "absolute";
+        this.tempDisplay.style.top = "25px";
+        this.tempDisplay.style.right = "50px";
+        this.tempDisplay.style.fontSize = "100px";
+        this.tempDisplay.style.fontWeight = "bold";
+        this.tempDisplay.style.color = "white";
+        this.tempDisplay.zIndex = "1000";
+        this.tempDisplay.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.5)";
 
-        let self = this;//keep a copy of 'this'
-
+        document.body.appendChild(this.tempDisplay);
     }
 
     renderWeather() {
 
         if (this.state === "sunny") {
             this.renderSunny();
+            this.temp = Math.floor(Math.random() * 10) + 25;
         } else if (this.state === "raining") {
             this.renderRaining();
+            this.temp = Math.floor(Math.random() * 10) + 10;
         } else if (this.state === "cloudy") {
             this.renderCloudy();
+            this.temp = Math.floor(Math.random() * 10) + 15;
         }
+
+        this.renderTemp();
     }
     renderSunny() {
         let sky = document.getElementsByClassName("sky")[0];
@@ -44,5 +56,8 @@ class Weather {
     renderCloudy() {
         let sky = document.getElementsByClassName("sky")[0];
         if (sky) sky.style.background = `rgb(150, 160, 180)`;
+    }
+    renderTemp() {
+        this.tempDisplay.innerHTML = `${this.temp}°C`;
     }
 }
