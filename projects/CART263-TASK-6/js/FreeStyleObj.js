@@ -9,9 +9,8 @@ class FreeStyleObj {
       this.theta = 0;
       this.length = length;
       this.yOffset = 20;
-      this.angularSpeed = .07;
+      this.angularSpeed = 0.1;
       this.context =context;
-
     }
   
     display() {
@@ -29,9 +28,10 @@ class FreeStyleObj {
     }
 
     update(){
-        //update freestyle
-       // console.log("free style update")
-       // this.x+=1;
+      let volume = micVolume;
+      let newvolume = Math.min(volume * 5, 255);
+      this.fill_color = `rgb(${newvolume}, ${newvolume / 2}, ${50})`;
+      this.angularSpeed = 1 - micFrequency * 2;
     }
   }
   
